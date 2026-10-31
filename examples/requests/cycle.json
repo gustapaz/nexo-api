@@ -1,0 +1,26 @@
+{
+  "workers": 2,
+  "tasks": [
+    {
+      "id": "a",
+      "duration": 3,
+      "depends_on": [
+        "c"
+      ]
+    },
+    {
+      "id": "b",
+      "duration": 4,
+      "depends_on": [
+        "a"
+      ]
+    },
+    {
+      "id": "c",
+      "duration": 2,
+      "depends_on": [
+        "b"
+      ]
+    }
+  ]
+}

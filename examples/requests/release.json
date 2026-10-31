@@ -1,0 +1,40 @@
+{
+  "workers": 2,
+  "tasks": [
+    {
+      "id": "assets",
+      "label": "Preparar assets",
+      "duration": 4
+    },
+    {
+      "id": "build",
+      "label": "Compilar",
+      "duration": 6,
+      "depends_on": [
+        "assets"
+      ]
+    },
+    {
+      "id": "tests",
+      "label": "Testar",
+      "duration": 8
+    },
+    {
+      "id": "review",
+      "label": "Revisar",
+      "duration": 3,
+      "depends_on": [
+        "build",
+        "tests"
+      ]
+    },
+    {
+      "id": "deploy",
+      "label": "Publicar",
+      "duration": 2,
+      "depends_on": [
+        "review"
+      ]
+    }
+  ]
+}
